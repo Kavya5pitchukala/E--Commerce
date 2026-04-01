@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopSim - E-Commerce Simulation</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🛒 ShopSim</div>
+    <nav>
+      <span id="cart-count">Cart (0)</span>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>E-Commerce Database Simulation</h1>
+      <p>Demonstrating normalized schema design, optimized SQL queries, and ACID-compliant transactions.</p>
+    </section>
+
+    <section class="filters">
+      <button class="filter-btn active" data-cat="all">All</button>
+      <button class="filter-btn" data-cat="Electronics">Electronics</button>
+      <button class="filter-btn" data-cat="Clothing">Clothing</button>
+      <button class="filter-btn" data-cat="Books">Books</button>
+      <button class="filter-btn" data-cat="Home & Kitchen">Home & Kitchen</button>
+    </section>
+
+    <section class="products" id="product-grid"></section>
+
+    <section class="cart-section">
+      <h2>🧾 Cart</h2>
+      <div id="cart-items"><p class="empty">Your cart is empty.</p></div>
+      <div class="cart-total" id="cart-total"></div>
+      <button id="checkout-btn" style="display:none">Place Order</button>
+      <div id="order-msg"></div>
+    </section>
+
+    <section class="query-section">
+      <h2>⚙️ Live SQL Queries (Simulated)</h2>
+      <div class="query-box">
+        <button onclick="runQuery('top-products')">Top Selling Products</button>
+        <button onclick="runQuery('revenue')">Revenue by Category</button>
+        <button onclick="runQuery('low-stock')">Low Stock Alert</button>
+      </div>
+      <pre id="query-output"></pre>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
